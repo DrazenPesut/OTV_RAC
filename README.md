@@ -1,6 +1,6 @@
 # Glavni gradovi
 
-Skup podataka obuhvaća desetak nasumično odabranih glavnih gradova svijeta te opisuje njihove osnovne atribute i navodi i opisuje neke od zanimljivih znamenitosti koje se u njima nalaze.
+Skup podataka obuhvaća desetak nasumično odabranih glavnih gradova svijeta te opisuje njihove osnovne atribute i navodi i opisuje neke od zanimljivih znamenitosti koje se u njima nalaze. Trenutno su priloženi podaci u formatima JSON i CSV te dump baze podataka u koju su spremljeni.
 
 ---
 
