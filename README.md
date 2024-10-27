@@ -5,7 +5,6 @@ Skup podataka obuhvaća desetak nasumično odabranih glavnih gradova svijeta te 
 ---
 
 | **Naslov**                               | Glavni gradovi                                  |
-|------------------------------------------|-------------------------------------------------|
 | **Opis**                                 | Kratak skup podataka glavnih gradova svijeta    |
 | **Licenca**                              | Ovaj skup podataka licenciran je pod **CC0 v1.0** licencom |
 | **Autor**                                | Dražen Pešut                                    |
