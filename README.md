@@ -17,7 +17,7 @@ Skup podataka obuhvaća desetak nasumično odabranih glavnih gradova svijeta te 
 
 **Opis atributa:**
 
-| **Atribut**               | **Opis**                                                                    |
+| **Atribut**               | **Opis atributa**                                                                    |
 |---------------------------|-----------------------------------------------------------------------------|
 | **Naziv**                 | Ime grada.                                                                 |
 | **Zemlja**                | Zemlja u kojoj se grad nalazi.                                            |
