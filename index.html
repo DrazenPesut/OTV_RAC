@@ -1,0 +1,181 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kratak skup podataka o glavnim gradovima svijeta, uključujući podatke o znamenitostima, broj stanovnika, vremenskoj zoni i drugim atributima.">
+    <meta name="author" content="Dražen Pešut">
+    <meta name="title" content="Skup podataka o glavnim gradovima">
+    <title>Skup podataka o glavnim gradovima</title>
+</head>
+<body>
+
+    <header>
+        <h1>Skup podataka o glavnim gradovima svijeta</h1>
+    </header>
+
+    <section>
+        <h2>Opis skupa podataka</h2>
+        <p>Ovaj skup podataka obuhvaća desetak nasumično odabranih glavnih gradova svijeta te opisuje njihove osnovne atribute i navodi i opisuje neke od zanimljivih znamenitosti koje se u njima nalaze.</p>
+        <p>Trenutno su priloženi podaci u formatima JSON i CSV te dump baze podataka u koju su spremljeni.</p>
+    </section>
+
+    <section>
+        <h2>Metapodaci skupa podataka</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Naslov</th>
+                    <th>Glavni gradovi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Opis</strong></td>
+                    <td>Kratak skup podataka glavnih gradova svijeta</td>
+                </tr>
+                <tr>
+                    <td><strong>Licenca</strong></td>
+                    <td>Ovaj skup podataka licenciran je pod <strong>CC0 v1.0</strong> licencom</td>
+                </tr>
+                <tr>
+                    <td><strong>Autor</strong></td>
+                    <td>Dražen Pešut</td>
+                </tr>
+                <tr>
+                    <td><strong>Verzija skupa podataka</strong></td>
+                    <td>1.0</td>
+                </tr>
+                <tr>
+                    <td><strong>Jezik</strong></td>
+                    <td>Hrvatski</td>
+                </tr>
+                <tr>
+                    <td><strong>Datum prikupljanja podataka</strong></td>
+                    <td>2024-10-27</td>
+                </tr>
+                <tr>
+                    <td><strong>Metodologija prikupljanja podataka</strong></td>
+                    <td>Svi su podaci prikupljeni iz javno dostupnih izvora te mogu međusobno blago odstupati</td>
+                </tr>
+                <tr>
+                    <td><strong>Format</strong></td>
+                    <td>JSON, CSV</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Opis atributa skupa podataka</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Atribut</th>
+                    <th>Opis atributa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Naziv</strong></td>
+                    <td>Ime grada.</td>
+                </tr>
+                <tr>
+                    <td><strong>Zemlja</strong></td>
+                    <td>Zemlja u kojoj se grad nalazi.</td>
+                </tr>
+                <tr>
+                    <td><strong>Gradonačelnik</strong></td>
+                    <td>Ime gradonačelnika, guvernera ili nadležne osobe na vlasti.</td>
+                </tr>
+                <tr>
+                    <td><strong>Broj stanovnika</strong></td>
+                    <td>Ukupan broj stanovnika u gradu, ne uključuje metropolitansko područje.</td>
+                </tr>
+                <tr>
+                    <td><strong>Površina (km²)</strong></td>
+                    <td>Površina grada u kvadratnim kilometrima, ne uključuje metropolitansko područje.</td>
+                </tr>
+                <tr>
+                    <td><strong>Vremenska zona</strong></td>
+                    <td>Vremenska zona u kojoj se grad nalazi.</td>
+                </tr>
+                <tr>
+                    <td><strong>Indeks sigurnosti</strong></td>
+                    <td>Indeks sigurnosti grada.</td>
+                </tr>
+                <tr>
+                    <td><strong>Nadmorska visina (m)</strong></td>
+                    <td>Nadmorska visina grada u metrima.</td>
+                </tr>
+                <tr>
+                    <td><strong>Rijeke</strong></td>
+                    <td>Popis rijeka koje prolaze kroz grad.</td>
+                </tr>
+                <tr>
+                    <td><strong>Znamenitosti</strong></td>
+                    <td>Popis značajnih znamenitosti u gradu.</td>
+                </tr>
+                <tr>
+                    <td><strong>Opis</strong></td>
+                    <td>Kratak opis pojedine znamenitosti.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Preuzmi podatke</h2>
+        
+        <a href="../glavni_gradovi.csv" download="../glavni_gradovi.csv">
+            Preuzmi podatke u CSV formatu
+        </a>
+        <br>
+
+        <a href="../glavni_gradovi.json" download="../glavni_gradovi.json">
+            Preuzmi podatke u JSON formatu
+        </a>
+    </section>
+    <br/>
+    <section>
+        <a href="/form">
+            Obrazac za filtriranje i tablica
+        </a>
+    </section>
+
+    <script>
+        fetch('/cities')
+          .then(response => response.json())
+          .then(data => {
+            const tableBody = document.getElementById('table');
+            
+            data.forEach(city => {
+              const row = document.createElement('tr');
+              
+              row.innerHTML = `<td>${city.Naziv}</td>
+            <td>${city.Zemlja}</td>
+            <td>${city.Gradonacelnik}</td>
+            <td>${city.Broj_stanovnika_grada}</td>
+            <td>${city.Povrsina_grada_km2}</td>
+            <td>${city.Vremenska_zona}</td>
+            <td>${city.Indeks_sigurnosti}</td>
+            <td>${city.Nadmorska_visina_m}</td>
+            <td>
+              ${city.Rijeke.join(', ')}
+            </td>
+            <td>
+              <ul>
+                ${city.znamenitosti.map(attraction => `
+                  <li><strong>${attraction.Naziv}:</strong> ${attraction.Opis}</li>
+                `).join('')}
+              </ul>
+            </td>`
+          ;
+              
+              tableBody.appendChild(row); // Dodaj red u tablicu
+            });
+          })
+          .catch(error => console.error('Error fetching data:', error));
+      </script>
+</body>
+</html>

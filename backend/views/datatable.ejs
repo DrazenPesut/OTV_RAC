@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>City Filter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form id="form" method="post">
+            <label for="fv" id="fv_label"> Polje za pretragu </label><br />
+            <input type="text" name="filter_value" id="fv" placeholder="Unesi vrijednost"><br />
+            <span id="fv_desc"> Po ovoj vrijednosti će se potražiti vrijednost</span><br />
+            <br />
+            <select name="filter_menu" id="fm">
+                <option value="" selected> Odaberite polje za pretragu </option>
+                <option value="wildcard"> Sva polja (WildCard) </option>
+                <option value="Naziv"> Naziv </option>
+                <option value="Zemlja"> Zemlja </option>
+                <option value="Gradonacelnik"> Gradonacelnik </option>
+                <option value="Broj_stanovnika_grada"> Broj stanovnika </option>
+                <option value="Povrsina_grada_km2"> Povrsina </option>
+                <option value="Vremenska_zona"> Vremenska zona </option>
+                <option value="Indeks_sigurnosti"> Indeks sigurnosti </option>
+                <option value="Nadmorska_visina_m"> Nadmorska visina </option>
+                <option value="Rijeke"> Rijeke </option>
+                <option value="Znamenitosti"> Znamenitosti </option>
+            </select><br />
+            <button type="submit" id="submit"> Pretraži </button>
+        </form>
+    </div>
+
+    <div id="table-container">
+        <table id="table">
+            <tr id="table-header">
+                <th class="attr-name"> Naziv </th>
+                <th class="attr-name"> Zemlja </th>
+                <th class="attr-name"> Gradonacelnik </th>
+                <th class="attr-name"> Broj stanovnika </th>
+                <th class="attr-name"> Povrsina </th>
+                <th class="attr-name"> Vremenska zona </th>
+                <th class="attr-name"> Indeks sigurnosti </th>
+                <th class="attr-name"> Nadmorska visina </th>
+                <th class="attr-name"> Rijeka </th>
+                <th class="attr-name"> Znamenitosti </th>
+            </tr>
+        </table>
+    </div>
+
+    <script async defer>
+        // Fetch cities and attractions data
+        async function fetchCities() {
+            const response = await fetch('/cities');
+            if (!response.ok) {
+                console.error("Error fetching cities");
+                return [];
+            } else {
+                return response.json();
+            }
+        }
+
+        // Function to create a row for each city
+        function createRow(city, city_attractions) {
+            const table = document.getElementById('table');
+            const row = document.createElement('tr');
+
+            const td1 = document.createElement('td');
+            td1.textContent = city.Naziv || 'N/A';
+            row.appendChild(td1);
+
+            const td2 = document.createElement('td');
+            td2.textContent = city.Zemlja || 'N/A';
+            row.appendChild(td2);
+
+            const td3 = document.createElement('td');
+            td3.textContent = city.Gradonacelnik || 'N/A';
+            row.appendChild(td3);
+
+            const td4 = document.createElement('td');
+            td4.textContent = city.Broj_stanovnika_grada || 'N/A';
+            row.appendChild(td4);
+
+            const td5 = document.createElement('td');
+            td5.textContent = city.Povrsina_grada_km2 || 'N/A';
+            row.appendChild(td5);
+
+            const td6 = document.createElement('td');
+            td6.textContent = city.Vremenska_zona || 'N/A';
+            row.appendChild(td6);
+
+            const td7 = document.createElement('td');
+            td7.textContent = city.Indeks_sigurnosti;
+            row.appendChild(td7);
+
+            const td8 = document.createElement('td');
+            td8.textContent = city.Nadmorska_visina_m;
+            row.appendChild(td8);
+
+            const td9 = document.createElement('td');
+            td9.textContent = city.Rijeke || 'N/A';
+            row.appendChild(td9);
+
+            const td10 = document.createElement('td');
+            td10.textContent = city_attractions;
+            row.appendChild(td10);
+
+            table.appendChild(row);
+        }
+
+        // Function to fill the table
+        let filled = false;
+        async function fillTable() {
+            if (!filled) {
+                const data = await fetchCities();
+                const cities = data[0];
+                const attractions = data[1];
+
+                for (const city of cities) {
+                    let city_attractions = [];
+                    for (const attraction of attractions) {
+                        if (attraction.Grad_id === city._id) {
+                            city_attractions.push(attraction.Naziv);
+                        }
+                    }
+                    createRow(city, city_attractions);
+                }
+                filled = true; // Set flag to true after filling the table
+            } else {
+                console.log('Table already generated');
+            }
+        }
+
+        // Function to clear the table and reset the filled flag
+        function emptyTable() {
+            const table = document.getElementById('table');
+            table.innerHTML = `
+                <tr id="table-header">
+                    <th class="attr-name"> Naziv </th>
+                    <th class="attr-name"> Zemlja </th>
+                    <th class="attr-name"> Gradonacelnik </th>
+                    <th class="attr-name"> Broj stanovnika </th>
+                    <th class="attr-name"> Povrsina </th>
+                    <th class="attr-name"> Vremenska zona </th>
+                    <th class="attr-name"> Indeks sigurnosti </th>
+                    <th class="attr-name"> Nadmorska visina </th>
+                    <th class="attr-name"> Rijeka </th>
+                    <th class="attr-name"> Znamenitosti </th>
+                </tr>
+            `;
+            filled = false; // Reset the filled flag when table is emptied
+        }
+
+        async function filterTable(filterValue, filterMenu) {
+    emptyTable();  // Clear the table
+
+    const data = await fetchCities();
+    const citiesData = data[0];
+    const attractions = data[1];
+
+    let filteredCities = [];
+
+   
+    if (filterMenu === 'wildcard') {
+        
+        filteredCities = citiesData.filter(city => {
+            const cityMatches = Object.values(city).some(value => value && value.toString().toLowerCase().includes(filterValue.toLowerCase()));
+
+            const attractionsMatches = attractions.some(attraction => {
+                return attraction.Grad_id === city._id && attraction.Naziv.toLowerCase().includes(filterValue.toLowerCase());
+            });
+
+            return cityMatches || attractionsMatches;  // Include city or its attractions if they match
+            });
+        } else if (filterMenu !== 'Znamenitosti' && filterMenu !== 'wildcard') {
+        filteredCities = citiesData.filter(city => {
+            return city[filterMenu] && city[filterMenu].toString().toLowerCase().includes(filterValue.toLowerCase());
+            });
+        } else if (filterMenu === 'Znamenitosti') {
+        const cityIdsWithAttractions = new Set();
+
+        attractions.forEach(attraction => {
+            if (attraction.Naziv.toLowerCase().includes(filterValue.toLowerCase())) {
+                cityIdsWithAttractions.add(attraction.Grad_id);
+            }
+        });
+
+        filteredCities = citiesData.filter(city => {
+            return cityIdsWithAttractions.has(city._id);
+        });
+    }
+
+    filteredCities.forEach(city => {
+        let city_attractions = [];
+        attractions.forEach(attraction => {
+            if (attraction.Grad_id === city._id) {
+                city_attractions.push(attraction.Naziv);
+            }
+        });
+        createRow(city, city_attractions.join(", "));
+    });
+    }
+
+
+        function handleFormSubmit(event) {
+            event.preventDefault(); 
+
+            const filterValue = document.getElementById('fv').value;
+            const filterMenu = document.getElementById('fm').value;
+
+            
+            if (filterValue === '') {
+                emptyTable(); 
+                fillTable(); 
+            } else {
+                filterTable(filterValue, filterMenu)
+            }
+        }
+
+        const form = document.getElementById('form');
+        form.addEventListener('submit', handleFormSubmit);
+
+        fillTable();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1195 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "default": [],
+    "title": "Root Schema",
+    "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+            "_id",
+            "Naziv",
+            "Zemlja",
+            "Gradonacelnik",
+            "Broj_stanovnika_grada",
+            "Povrsina_grada_km2",
+            "Vremenska_zona",
+            "Indeks_sigurnosti",
+            "Nadmorska_visina_m",
+            "Rijeke",
+            "Znamenitosti"
+        ],
+        "properties": {
+            "_id": {
+                "type": "string",
+                "title": "The _id Schema",
+                "examples": [
+                    "671d3e151fbe2cf25e86b01e",
+                    "671d3f348e1aa51e8e86b01d",
+                    "671d3f348e1aa51e8e86b01e",
+                    "671d3f348e1aa51e8e86b01f",
+                    "671d3f348e1aa51e8e86b020",
+                    "671d3f348e1aa51e8e86b021",
+                    "671d3f348e1aa51e8e86b022",
+                    "671d3f348e1aa51e8e86b023",
+                    "671d3f348e1aa51e8e86b024",
+                    "671d3f348e1aa51e8e86b025"
+                ]
+            },
+            "Naziv": {
+                "type": "string",
+                "title": "The Naziv Schema",
+                "examples": [
+                    "Pariz",
+                    "Berlin",
+                    "Buenos Aires",
+                    "Manila",
+                    "Tokyo",
+                    "Bangkok",
+                    "Kairo",
+                    "Moskva",
+                    "Kuala Lumpur",
+                    "Havana"
+                ]
+            },
+            "Zemlja": {
+                "type": "string",
+                "title": "The Zemlja Schema",
+                "examples": [
+                    "Francuska",
+                    "Njema─ìka",
+                    "Argentina",
+                    "Filipini",
+                    "Japan",
+                    "Tajland",
+                    "Egipat",
+                    "Rusija",
+                    "Malezija",
+                    "Kuba"
+                ]
+            },
+            "Gradonacelnik": {
+                "type": "string",
+                "title": "The Gradonacelnik Schema",
+                "examples": [
+                    "Anne Hidalgo",
+                    "Kai Wegner",
+                    "Jorge Macri",
+                    "Mariah Sheilah H.",
+                    "Yuriko Koike",
+                    "Chadchart Sittipunt",
+                    "Khaled Abdel Aal",
+                    "Sergey Sobyanin",
+                    "Maimunah Mohd Sharif",
+                    "Juan Contino Aslan"
+                ]
+            },
+            "Broj_stanovnika_grada": {
+                "type": "integer",
+                "title": "The Broj_stanovnika_grada Schema",
+                "examples": [
+                    2102650,
+                    3878100,
+                    3120612,
+                    1846513,
+                    14187176,
+                    9034000,
+                    10100166,
+                    13010112,
+                    2075600,
+                    1814207
+                ]
+            },
+            "Povrsina_grada_km2": {
+                "type": [
+                    "number",
+                    "integer"
+                ],
+                "title": "The Povrsina_grada_km2 Schema",
+                "examples": [
+                    105.4,
+                    891.8,
+                    203.3,
+                    38.55,
+                    2194,
+                    1569,
+                    3085,
+                    2511,
+                    243,
+                    728.3
+                ]
+            },
+            "Vremenska_zona": {
+                "type": "string",
+                "title": "The Vremenska_zona Schema",
+                "examples": [
+                    "CET",
+                    "UTC-3",
+                    "UTC+8",
+                    "UTC+9",
+                    "UTC+7",
+                    "UTC+2",
+                    "UTC+3",
+                    "UTC-5"
+                ]
+            },
+            "Indeks_sigurnosti": {
+                "type": "number",
+                "title": "The Indeks_sigurnosti Schema",
+                "examples": [
+                    42.09,
+                    55.38,
+                    36.59,
+                    35.77,
+                    75.55,
+                    59.5,
+                    49.38,
+                    64.41,
+                    39.32
+                ]
+            },
+            "Nadmorska_visina_m": {
+                "type": [
+                    "integer",
+                    "number"
+                ],
+                "title": "The Nadmorska_visina_m Schema",
+                "examples": [
+                    35,
+                    34,
+                    25,
+                    13,
+                    0,
+                    1.5,
+                    23,
+                    156,
+                    63,
+                    59
+                ]
+            },
+            "Rijeke": {
+                "type": "array",
+                "title": "The Rijeke Schema",
+                "items": {
+                    "type": "string",
+                    "title": "A Schema",
+                    "examples": [
+                        "Seine",
+                        "Spree",
+                        "Havel",
+                        "Dahme",
+                        "Rio Reconquista",
+                        "Rio Lujan",
+                        "Rio Tigris",
+                        "Pasig",
+                        "Marikina",
+                        "San Juan",
+                        "Sumida",
+                        "Tama",
+                        "Arakawa",
+                        "Edogawa",
+                        "Chao Phraya",
+                        "Nil",
+                        "Moskva",
+                        "Gombak",
+                        "Klang",
+                        "Batu",
+                        "Havana",
+                        "Luyano",
+                        "Cascajal"
+                    ]
+                },
+                "examples": [
+                    [
+                        "Seine"],
+                    ["Spree",
+                        "Havel",
+                        "Dahme"
+                    ],
+                    ["Rio Reconquista",
+                        "Rio Lujan",
+                        "Rio Tigris"
+                    ],
+                    ["Pasig",
+                        "Marikina",
+                        "San Juan"
+                    ],
+                    ["Sumida",
+                        "Tama",
+                        "Arakawa",
+                        "Edogawa"
+                    ],
+                    [
+                        "Chao Phraya"],
+                    [
+                        "Nil"],
+                    [
+                        "Moskva"],
+                    ["Gombak",
+                        "Klang",
+                        "Batu"
+                    ],
+                    ["Havana",
+                        "Luyano",
+                        "Cascajal"
+                    ]
+                ]
+            },
+            "Znamenitosti": {
+                "type": "array",
+                "title": "The Znamenitosti Schema",
+                "items": {
+                    "type": "object",
+                    "title": "A Schema",
+                    "required": [
+                        "_id",
+                        "Grad_id",
+                        "Naziv",
+                        "Opis"
+                    ],
+                    "properties": {
+                        "_id": {
+                            "type": "string",
+                            "title": "The _id Schema",
+                            "examples": [
+                                "671d631f1ddd1c5ec586b01d",
+                                "671d631f1ddd1c5ec586b01e",
+                                "671d631f1ddd1c5ec586b01f",
+                                "671d631f1ddd1c5ec586b020",
+                                "671d631f1ddd1c5ec586b021",
+                                "671d631f1ddd1c5ec586b022",
+                                "671d631f1ddd1c5ec586b023",
+                                "671d631f1ddd1c5ec586b024",
+                                "671d631f1ddd1c5ec586b025",
+                                "671d631f1ddd1c5ec586b026",
+                                "671d631f1ddd1c5ec586b027",
+                                "671d631f1ddd1c5ec586b028",
+                                "671d631f1ddd1c5ec586b029",
+                                "671d631f1ddd1c5ec586b02a",
+                                "671d631f1ddd1c5ec586b02b",
+                                "671d631f1ddd1c5ec586b02c",
+                                "671d631f1ddd1c5ec586b02d",
+                                "671d631f1ddd1c5ec586b02e",
+                                "671d631f1ddd1c5ec586b02f",
+                                "671d631f1ddd1c5ec586b030",
+                                "671d631f1ddd1c5ec586b031",
+                                "671d631f1ddd1c5ec586b032"
+                            ]
+                        },
+                        "Grad_id": {
+                            "type": "string",
+                            "title": "The Grad_id Schema",
+                            "examples": [
+                                "671d3e151fbe2cf25e86b01e",
+                                "671d3f348e1aa51e8e86b01d",
+                                "671d3f348e1aa51e8e86b01e",
+                                "671d3f348e1aa51e8e86b01f",
+                                "671d3f348e1aa51e8e86b020",
+                                "671d3f348e1aa51e8e86b021",
+                                "671d3f348e1aa51e8e86b022",
+                                "671d3f348e1aa51e8e86b023",
+                                "671d3f348e1aa51e8e86b024",
+                                "671d3f348e1aa51e8e86b025"
+                            ]
+                        },
+                        "Naziv": {
+                            "type": "string",
+                            "title": "The Naziv Schema",
+                            "examples": [
+                                "Eiffelov toranj",
+                                "Muzej Louvre",
+                                "Katedrala Notre-Dame",
+                                "Brandenbur┼íka vrata",
+                                "Berlinski zid",
+                                "Casa Rosada",
+                                "Obelisk",
+                                "Binondo",
+                                "Manila Ocean Park",
+                                "Fort Santiago",
+                                "Shibuya Crossing",
+                                "Tokyo Skytree",
+                                "Imperial Palace",
+                                "Grand Palace",
+                                "Sfinga",
+                                "Piramide u Gizi",
+                                "Kremlj",
+                                "Crveni trg",
+                                "Petronas Twin Towers",
+                                "Jalan Alor",
+                                "Catedral de la Habana",
+                                "Castillo del Morro"
+                            ]
+                        },
+                        "Opis": {
+                            "type": "string",
+                            "title": "The Opis Schema",
+                            "examples": [
+                                "Simbol Francuske, visok 300 metara, izgra─æen 1889. godine.",
+                                "Najve─çi muzej umjetnosti na svijetu, poznat po Mona Lisi.",
+                                "Poznata goti─ìka katedrala iz 12. stolje─ça.",
+                                "Neoklasi─ìna struktura koja simbolizira mirno ujedinjenje Njema─ìke.",
+                                "Fizi─ìka granica koja je dijelila Berlin od 1961. do 1989. godine.",
+                                "Simbol politi─ìkog ┼¥ivota Argentine s karakteristi─ìnom ru┼¥i─ìastom fasadom.",
+                                "Ikoni─ìna struktura i simbol Buenos Airesa.",
+                                "Najstarija kineska ─ìetvrt u svijetu, poznata po kulinarstvu.",
+                                "Tematski park posve─çen morskom ┼¥ivotu.",
+                                "Povijesna tvr─æava koja je klju─ìna u filipinskoj povijesti.",
+                                "Jedno od najprometnijih raskri┼¥ja na svijetu.",
+                                "Najvi┼ía struktura u Japanu s spektakularnim pogledima.",
+                                "Glavna rezidencija japanskog cara s predivnim vrtovima.",
+                                "Prekrasna kraljevska pala─ìa u Bangkoku.",
+                                "Veliki kameni kip s tijelom lava i glavom faraona.",
+                                "Najpoznatije piramide na svijetu, uklju─ìuju─çi Veliku piramidu.",
+                                "Povijesna tvr─æava i politi─ìko sredi┼íte Rusije.",
+                                "Poznata javna povr┼íina ispred Kremlja.",
+                                "Najve─çi dvostruki neboder na svijetu, simbol Kuala Lumpura.",
+                                "Poznata ulica hrane s raznovrsnim ┼ítandovima.",
+                                "Barokna katedrala u starom gradu Havani.",
+                                "Povijesna utvrda koja ┼ítiti ulaz u luku Havanu."
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "_id": "671d631f1ddd1c5ec586b01d",
+                        "Grad_id": "671d3e151fbe2cf25e86b01e",
+                        "Naziv": "Eiffelov toranj",
+                        "Opis": "Simbol Francuske, visok 300 metara, izgra─æen 1889. godine."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b01e",
+                        "Grad_id": "671d3e151fbe2cf25e86b01e",
+                        "Naziv": "Muzej Louvre",
+                        "Opis": "Najve─çi muzej umjetnosti na svijetu, poznat po Mona Lisi."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b01f",
+                        "Grad_id": "671d3e151fbe2cf25e86b01e",
+                        "Naziv": "Katedrala Notre-Dame",
+                        "Opis": "Poznata goti─ìka katedrala iz 12. stolje─ça."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b020",
+                        "Grad_id": "671d3f348e1aa51e8e86b01d",
+                        "Naziv": "Brandenbur┼íka vrata",
+                        "Opis": "Neoklasi─ìna struktura koja simbolizira mirno ujedinjenje Njema─ìke."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b021",
+                        "Grad_id": "671d3f348e1aa51e8e86b01d",
+                        "Naziv": "Berlinski zid",
+                        "Opis": "Fizi─ìka granica koja je dijelila Berlin od 1961. do 1989. godine."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b022",
+                        "Grad_id": "671d3f348e1aa51e8e86b01e",
+                        "Naziv": "Casa Rosada",
+                        "Opis": "Simbol politi─ìkog ┼¥ivota Argentine s karakteristi─ìnom ru┼¥i─ìastom fasadom."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b023",
+                        "Grad_id": "671d3f348e1aa51e8e86b01e",
+                        "Naziv": "Obelisk",
+                        "Opis": "Ikoni─ìna struktura i simbol Buenos Airesa."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b024",
+                        "Grad_id": "671d3f348e1aa51e8e86b01f",
+                        "Naziv": "Binondo",
+                        "Opis": "Najstarija kineska ─ìetvrt u svijetu, poznata po kulinarstvu."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b025",
+                        "Grad_id": "671d3f348e1aa51e8e86b01f",
+                        "Naziv": "Manila Ocean Park",
+                        "Opis": "Tematski park posve─çen morskom ┼¥ivotu."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b026",
+                        "Grad_id": "671d3f348e1aa51e8e86b01f",
+                        "Naziv": "Fort Santiago",
+                        "Opis": "Povijesna tvr─æava koja je klju─ìna u filipinskoj povijesti."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b027",
+                        "Grad_id": "671d3f348e1aa51e8e86b020",
+                        "Naziv": "Shibuya Crossing",
+                        "Opis": "Jedno od najprometnijih raskri┼¥ja na svijetu."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b028",
+                        "Grad_id": "671d3f348e1aa51e8e86b020",
+                        "Naziv": "Tokyo Skytree",
+                        "Opis": "Najvi┼ía struktura u Japanu s spektakularnim pogledima."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b029",
+                        "Grad_id": "671d3f348e1aa51e8e86b020",
+                        "Naziv": "Imperial Palace",
+                        "Opis": "Glavna rezidencija japanskog cara s predivnim vrtovima."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b02a",
+                        "Grad_id": "671d3f348e1aa51e8e86b021",
+                        "Naziv": "Grand Palace",
+                        "Opis": "Prekrasna kraljevska pala─ìa u Bangkoku."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b02b",
+                        "Grad_id": "671d3f348e1aa51e8e86b022",
+                        "Naziv": "Sfinga",
+                        "Opis": "Veliki kameni kip s tijelom lava i glavom faraona."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b02c",
+                        "Grad_id": "671d3f348e1aa51e8e86b022",
+                        "Naziv": "Piramide u Gizi",
+                        "Opis": "Najpoznatije piramide na svijetu, uklju─ìuju─çi Veliku piramidu."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b02d",
+                        "Grad_id": "671d3f348e1aa51e8e86b023",
+                        "Naziv": "Kremlj",
+                        "Opis": "Povijesna tvr─æava i politi─ìko sredi┼íte Rusije."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b02e",
+                        "Grad_id": "671d3f348e1aa51e8e86b023",
+                        "Naziv": "Crveni trg",
+                        "Opis": "Poznata javna povr┼íina ispred Kremlja."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b02f",
+                        "Grad_id": "671d3f348e1aa51e8e86b024",
+                        "Naziv": "Petronas Twin Towers",
+                        "Opis": "Najve─çi dvostruki neboder na svijetu, simbol Kuala Lumpura."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b030",
+                        "Grad_id": "671d3f348e1aa51e8e86b024",
+                        "Naziv": "Jalan Alor",
+                        "Opis": "Poznata ulica hrane s raznovrsnim ┼ítandovima."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b031",
+                        "Grad_id": "671d3f348e1aa51e8e86b025",
+                        "Naziv": "Catedral de la Habana",
+                        "Opis": "Barokna katedrala u starom gradu Havani."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b032",
+                        "Grad_id": "671d3f348e1aa51e8e86b025",
+                        "Naziv": "Castillo del Morro",
+                        "Opis": "Povijesna utvrda koja ┼ítiti ulaz u luku Havanu."
+                    }]
+                },
+                "examples": [
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b01d",
+                        "Grad_id": "671d3e151fbe2cf25e86b01e",
+                        "Naziv": "Eiffelov toranj",
+                        "Opis": "Simbol Francuske, visok 300 metara, izgra─æen 1889. godine."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b01e",
+                        "Grad_id": "671d3e151fbe2cf25e86b01e",
+                        "Naziv": "Muzej Louvre",
+                        "Opis": "Najve─çi muzej umjetnosti na svijetu, poznat po Mona Lisi."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b01f",
+                        "Grad_id": "671d3e151fbe2cf25e86b01e",
+                        "Naziv": "Katedrala Notre-Dame",
+                        "Opis": "Poznata goti─ìka katedrala iz 12. stolje─ça."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b020",
+                        "Grad_id": "671d3f348e1aa51e8e86b01d",
+                        "Naziv": "Brandenbur┼íka vrata",
+                        "Opis": "Neoklasi─ìna struktura koja simbolizira mirno ujedinjenje Njema─ìke."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b021",
+                        "Grad_id": "671d3f348e1aa51e8e86b01d",
+                        "Naziv": "Berlinski zid",
+                        "Opis": "Fizi─ìka granica koja je dijelila Berlin od 1961. do 1989. godine."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b022",
+                        "Grad_id": "671d3f348e1aa51e8e86b01e",
+                        "Naziv": "Casa Rosada",
+                        "Opis": "Simbol politi─ìkog ┼¥ivota Argentine s karakteristi─ìnom ru┼¥i─ìastom fasadom."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b023",
+                        "Grad_id": "671d3f348e1aa51e8e86b01e",
+                        "Naziv": "Obelisk",
+                        "Opis": "Ikoni─ìna struktura i simbol Buenos Airesa."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b024",
+                        "Grad_id": "671d3f348e1aa51e8e86b01f",
+                        "Naziv": "Binondo",
+                        "Opis": "Najstarija kineska ─ìetvrt u svijetu, poznata po kulinarstvu."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b025",
+                        "Grad_id": "671d3f348e1aa51e8e86b01f",
+                        "Naziv": "Manila Ocean Park",
+                        "Opis": "Tematski park posve─çen morskom ┼¥ivotu."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b026",
+                        "Grad_id": "671d3f348e1aa51e8e86b01f",
+                        "Naziv": "Fort Santiago",
+                        "Opis": "Povijesna tvr─æava koja je klju─ìna u filipinskoj povijesti."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b027",
+                        "Grad_id": "671d3f348e1aa51e8e86b020",
+                        "Naziv": "Shibuya Crossing",
+                        "Opis": "Jedno od najprometnijih raskri┼¥ja na svijetu."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b028",
+                        "Grad_id": "671d3f348e1aa51e8e86b020",
+                        "Naziv": "Tokyo Skytree",
+                        "Opis": "Najvi┼ía struktura u Japanu s spektakularnim pogledima."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b029",
+                        "Grad_id": "671d3f348e1aa51e8e86b020",
+                        "Naziv": "Imperial Palace",
+                        "Opis": "Glavna rezidencija japanskog cara s predivnim vrtovima."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b02a",
+                        "Grad_id": "671d3f348e1aa51e8e86b021",
+                        "Naziv": "Grand Palace",
+                        "Opis": "Prekrasna kraljevska pala─ìa u Bangkoku."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b02b",
+                        "Grad_id": "671d3f348e1aa51e8e86b022",
+                        "Naziv": "Sfinga",
+                        "Opis": "Veliki kameni kip s tijelom lava i glavom faraona."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b02c",
+                        "Grad_id": "671d3f348e1aa51e8e86b022",
+                        "Naziv": "Piramide u Gizi",
+                        "Opis": "Najpoznatije piramide na svijetu, uklju─ìuju─çi Veliku piramidu."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b02d",
+                        "Grad_id": "671d3f348e1aa51e8e86b023",
+                        "Naziv": "Kremlj",
+                        "Opis": "Povijesna tvr─æava i politi─ìko sredi┼íte Rusije."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b02e",
+                        "Grad_id": "671d3f348e1aa51e8e86b023",
+                        "Naziv": "Crveni trg",
+                        "Opis": "Poznata javna povr┼íina ispred Kremlja."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b02f",
+                        "Grad_id": "671d3f348e1aa51e8e86b024",
+                        "Naziv": "Petronas Twin Towers",
+                        "Opis": "Najve─çi dvostruki neboder na svijetu, simbol Kuala Lumpura."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b030",
+                        "Grad_id": "671d3f348e1aa51e8e86b024",
+                        "Naziv": "Jalan Alor",
+                        "Opis": "Poznata ulica hrane s raznovrsnim ┼ítandovima."
+                    }],
+                    [{
+                        "_id": "671d631f1ddd1c5ec586b031",
+                        "Grad_id": "671d3f348e1aa51e8e86b025",
+                        "Naziv": "Catedral de la Habana",
+                        "Opis": "Barokna katedrala u starom gradu Havani."
+                    },
+                    {
+                        "_id": "671d631f1ddd1c5ec586b032",
+                        "Grad_id": "671d3f348e1aa51e8e86b025",
+                        "Naziv": "Castillo del Morro",
+                        "Opis": "Povijesna utvrda koja ┼ítiti ulaz u luku Havanu."
+                    }]
+                ]
+            }
+        },
+        "examples": [{
+            "_id": "671d3e151fbe2cf25e86b01e",
+            "Naziv": "Pariz",
+            "Zemlja": "Francuska",
+            "Gradonacelnik": "Anne Hidalgo",
+            "Broj_stanovnika_grada": 2102650,
+            "Povrsina_grada_km2": 105.4,
+            "Vremenska_zona": "CET",
+            "Indeks_sigurnosti": 42.09,
+            "Nadmorska_visina_m": 35,
+            "Rijeke": [
+                "Seine"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b01d",
+                "Grad_id": "671d3e151fbe2cf25e86b01e",
+                "Naziv": "Eiffelov toranj",
+                "Opis": "Simbol Francuske, visok 300 metara, izgra─æen 1889. godine."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b01e",
+                "Grad_id": "671d3e151fbe2cf25e86b01e",
+                "Naziv": "Muzej Louvre",
+                "Opis": "Najve─çi muzej umjetnosti na svijetu, poznat po Mona Lisi."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b01f",
+                "Grad_id": "671d3e151fbe2cf25e86b01e",
+                "Naziv": "Katedrala Notre-Dame",
+                "Opis": "Poznata goti─ìka katedrala iz 12. stolje─ça."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b01d",
+            "Naziv": "Berlin",
+            "Zemlja": "Njema─ìka",
+            "Gradonacelnik": "Kai Wegner",
+            "Broj_stanovnika_grada": 3878100,
+            "Povrsina_grada_km2": 891.8,
+            "Vremenska_zona": "CET",
+            "Indeks_sigurnosti": 55.38,
+            "Nadmorska_visina_m": 34,
+            "Rijeke": [
+                "Spree",
+                "Havel",
+                "Dahme"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b020",
+                "Grad_id": "671d3f348e1aa51e8e86b01d",
+                "Naziv": "Brandenbur┼íka vrata",
+                "Opis": "Neoklasi─ìna struktura koja simbolizira mirno ujedinjenje Njema─ìke."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b021",
+                "Grad_id": "671d3f348e1aa51e8e86b01d",
+                "Naziv": "Berlinski zid",
+                "Opis": "Fizi─ìka granica koja je dijelila Berlin od 1961. do 1989. godine."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b01e",
+            "Naziv": "Buenos Aires",
+            "Zemlja": "Argentina",
+            "Gradonacelnik": "Jorge Macri",
+            "Broj_stanovnika_grada": 3120612,
+            "Povrsina_grada_km2": 203.3,
+            "Vremenska_zona": "UTC-3",
+            "Indeks_sigurnosti": 36.59,
+            "Nadmorska_visina_m": 25,
+            "Rijeke": [
+                "Rio Reconquista",
+                "Rio Lujan",
+                "Rio Tigris"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b022",
+                "Grad_id": "671d3f348e1aa51e8e86b01e",
+                "Naziv": "Casa Rosada",
+                "Opis": "Simbol politi─ìkog ┼¥ivota Argentine s karakteristi─ìnom ru┼¥i─ìastom fasadom."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b023",
+                "Grad_id": "671d3f348e1aa51e8e86b01e",
+                "Naziv": "Obelisk",
+                "Opis": "Ikoni─ìna struktura i simbol Buenos Airesa."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b01f",
+            "Naziv": "Manila",
+            "Zemlja": "Filipini",
+            "Gradonacelnik": "Mariah Sheilah H.",
+            "Broj_stanovnika_grada": 1846513,
+            "Povrsina_grada_km2": 38.55,
+            "Vremenska_zona": "UTC+8",
+            "Indeks_sigurnosti": 35.77,
+            "Nadmorska_visina_m": 13,
+            "Rijeke": [
+                "Pasig",
+                "Marikina",
+                "San Juan"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b024",
+                "Grad_id": "671d3f348e1aa51e8e86b01f",
+                "Naziv": "Binondo",
+                "Opis": "Najstarija kineska ─ìetvrt u svijetu, poznata po kulinarstvu."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b025",
+                "Grad_id": "671d3f348e1aa51e8e86b01f",
+                "Naziv": "Manila Ocean Park",
+                "Opis": "Tematski park posve─çen morskom ┼¥ivotu."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b026",
+                "Grad_id": "671d3f348e1aa51e8e86b01f",
+                "Naziv": "Fort Santiago",
+                "Opis": "Povijesna tvr─æava koja je klju─ìna u filipinskoj povijesti."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b020",
+            "Naziv": "Tokyo",
+            "Zemlja": "Japan",
+            "Gradonacelnik": "Yuriko Koike",
+            "Broj_stanovnika_grada": 14187176,
+            "Povrsina_grada_km2": 2194,
+            "Vremenska_zona": "UTC+9",
+            "Indeks_sigurnosti": 75.55,
+            "Nadmorska_visina_m": 0,
+            "Rijeke": [
+                "Sumida",
+                "Tama",
+                "Arakawa",
+                "Edogawa"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b027",
+                "Grad_id": "671d3f348e1aa51e8e86b020",
+                "Naziv": "Shibuya Crossing",
+                "Opis": "Jedno od najprometnijih raskri┼¥ja na svijetu."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b028",
+                "Grad_id": "671d3f348e1aa51e8e86b020",
+                "Naziv": "Tokyo Skytree",
+                "Opis": "Najvi┼ía struktura u Japanu s spektakularnim pogledima."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b029",
+                "Grad_id": "671d3f348e1aa51e8e86b020",
+                "Naziv": "Imperial Palace",
+                "Opis": "Glavna rezidencija japanskog cara s predivnim vrtovima."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b021",
+            "Naziv": "Bangkok",
+            "Zemlja": "Tajland",
+            "Gradonacelnik": "Chadchart Sittipunt",
+            "Broj_stanovnika_grada": 9034000,
+            "Povrsina_grada_km2": 1569,
+            "Vremenska_zona": "UTC+7",
+            "Indeks_sigurnosti": 59.5,
+            "Nadmorska_visina_m": 1.5,
+            "Rijeke": [
+                "Chao Phraya"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b02a",
+                "Grad_id": "671d3f348e1aa51e8e86b021",
+                "Naziv": "Grand Palace",
+                "Opis": "Prekrasna kraljevska pala─ìa u Bangkoku."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b022",
+            "Naziv": "Kairo",
+            "Zemlja": "Egipat",
+            "Gradonacelnik": "Khaled Abdel Aal",
+            "Broj_stanovnika_grada": 10100166,
+            "Povrsina_grada_km2": 3085,
+            "Vremenska_zona": "UTC+2",
+            "Indeks_sigurnosti": 49.38,
+            "Nadmorska_visina_m": 23,
+            "Rijeke": [
+                "Nil"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b02b",
+                "Grad_id": "671d3f348e1aa51e8e86b022",
+                "Naziv": "Sfinga",
+                "Opis": "Veliki kameni kip s tijelom lava i glavom faraona."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b02c",
+                "Grad_id": "671d3f348e1aa51e8e86b022",
+                "Naziv": "Piramide u Gizi",
+                "Opis": "Najpoznatije piramide na svijetu, uklju─ìuju─çi Veliku piramidu."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b023",
+            "Naziv": "Moskva",
+            "Zemlja": "Rusija",
+            "Gradonacelnik": "Sergey Sobyanin",
+            "Broj_stanovnika_grada": 13010112,
+            "Povrsina_grada_km2": 2511,
+            "Vremenska_zona": "UTC+3",
+            "Indeks_sigurnosti": 64.41,
+            "Nadmorska_visina_m": 156,
+            "Rijeke": [
+                "Moskva"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b02d",
+                "Grad_id": "671d3f348e1aa51e8e86b023",
+                "Naziv": "Kremlj",
+                "Opis": "Povijesna tvr─æava i politi─ìko sredi┼íte Rusije."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b02e",
+                "Grad_id": "671d3f348e1aa51e8e86b023",
+                "Naziv": "Crveni trg",
+                "Opis": "Poznata javna povr┼íina ispred Kremlja."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b024",
+            "Naziv": "Kuala Lumpur",
+            "Zemlja": "Malezija",
+            "Gradonacelnik": "Maimunah Mohd Sharif",
+            "Broj_stanovnika_grada": 2075600,
+            "Povrsina_grada_km2": 243,
+            "Vremenska_zona": "UTC+8",
+            "Indeks_sigurnosti": 39.32,
+            "Nadmorska_visina_m": 63,
+            "Rijeke": [
+                "Gombak",
+                "Klang",
+                "Batu"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b02f",
+                "Grad_id": "671d3f348e1aa51e8e86b024",
+                "Naziv": "Petronas Twin Towers",
+                "Opis": "Najve─çi dvostruki neboder na svijetu, simbol Kuala Lumpura."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b030",
+                "Grad_id": "671d3f348e1aa51e8e86b024",
+                "Naziv": "Jalan Alor",
+                "Opis": "Poznata ulica hrane s raznovrsnim ┼ítandovima."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b025",
+            "Naziv": "Havana",
+            "Zemlja": "Kuba",
+            "Gradonacelnik": "Juan Contino Aslan",
+            "Broj_stanovnika_grada": 1814207,
+            "Povrsina_grada_km2": 728.3,
+            "Vremenska_zona": "UTC-5",
+            "Indeks_sigurnosti": 55.38,
+            "Nadmorska_visina_m": 59,
+            "Rijeke": [
+                "Havana",
+                "Luyano",
+                "Cascajal"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b031",
+                "Grad_id": "671d3f348e1aa51e8e86b025",
+                "Naziv": "Catedral de la Habana",
+                "Opis": "Barokna katedrala u starom gradu Havani."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b032",
+                "Grad_id": "671d3f348e1aa51e8e86b025",
+                "Naziv": "Castillo del Morro",
+                "Opis": "Povijesna utvrda koja ┼ítiti ulaz u luku Havanu."
+            }]
+        }]
+    },
+    "examples": [
+        [{
+            "_id": "671d3e151fbe2cf25e86b01e",
+            "Naziv": "Pariz",
+            "Zemlja": "Francuska",
+            "Gradonacelnik": "Anne Hidalgo",
+            "Broj_stanovnika_grada": 2102650,
+            "Povrsina_grada_km2": 105.4,
+            "Vremenska_zona": "CET",
+            "Indeks_sigurnosti": 42.09,
+            "Nadmorska_visina_m": 35,
+            "Rijeke": [
+                "Seine"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b01d",
+                "Grad_id": "671d3e151fbe2cf25e86b01e",
+                "Naziv": "Eiffelov toranj",
+                "Opis": "Simbol Francuske, visok 300 metara, izgra─æen 1889. godine."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b01e",
+                "Grad_id": "671d3e151fbe2cf25e86b01e",
+                "Naziv": "Muzej Louvre",
+                "Opis": "Najve─çi muzej umjetnosti na svijetu, poznat po Mona Lisi."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b01f",
+                "Grad_id": "671d3e151fbe2cf25e86b01e",
+                "Naziv": "Katedrala Notre-Dame",
+                "Opis": "Poznata goti─ìka katedrala iz 12. stolje─ça."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b01d",
+            "Naziv": "Berlin",
+            "Zemlja": "Njema─ìka",
+            "Gradonacelnik": "Kai Wegner",
+            "Broj_stanovnika_grada": 3878100,
+            "Povrsina_grada_km2": 891.8,
+            "Vremenska_zona": "CET",
+            "Indeks_sigurnosti": 55.38,
+            "Nadmorska_visina_m": 34,
+            "Rijeke": [
+                "Spree",
+                "Havel",
+                "Dahme"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b020",
+                "Grad_id": "671d3f348e1aa51e8e86b01d",
+                "Naziv": "Brandenbur┼íka vrata",
+                "Opis": "Neoklasi─ìna struktura koja simbolizira mirno ujedinjenje Njema─ìke."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b021",
+                "Grad_id": "671d3f348e1aa51e8e86b01d",
+                "Naziv": "Berlinski zid",
+                "Opis": "Fizi─ìka granica koja je dijelila Berlin od 1961. do 1989. godine."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b01e",
+            "Naziv": "Buenos Aires",
+            "Zemlja": "Argentina",
+            "Gradonacelnik": "Jorge Macri",
+            "Broj_stanovnika_grada": 3120612,
+            "Povrsina_grada_km2": 203.3,
+            "Vremenska_zona": "UTC-3",
+            "Indeks_sigurnosti": 36.59,
+            "Nadmorska_visina_m": 25,
+            "Rijeke": [
+                "Rio Reconquista",
+                "Rio Lujan",
+                "Rio Tigris"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b022",
+                "Grad_id": "671d3f348e1aa51e8e86b01e",
+                "Naziv": "Casa Rosada",
+                "Opis": "Simbol politi─ìkog ┼¥ivota Argentine s karakteristi─ìnom ru┼¥i─ìastom fasadom."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b023",
+                "Grad_id": "671d3f348e1aa51e8e86b01e",
+                "Naziv": "Obelisk",
+                "Opis": "Ikoni─ìna struktura i simbol Buenos Airesa."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b01f",
+            "Naziv": "Manila",
+            "Zemlja": "Filipini",
+            "Gradonacelnik": "Mariah Sheilah H.",
+            "Broj_stanovnika_grada": 1846513,
+            "Povrsina_grada_km2": 38.55,
+            "Vremenska_zona": "UTC+8",
+            "Indeks_sigurnosti": 35.77,
+            "Nadmorska_visina_m": 13,
+            "Rijeke": [
+                "Pasig",
+                "Marikina",
+                "San Juan"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b024",
+                "Grad_id": "671d3f348e1aa51e8e86b01f",
+                "Naziv": "Binondo",
+                "Opis": "Najstarija kineska ─ìetvrt u svijetu, poznata po kulinarstvu."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b025",
+                "Grad_id": "671d3f348e1aa51e8e86b01f",
+                "Naziv": "Manila Ocean Park",
+                "Opis": "Tematski park posve─çen morskom ┼¥ivotu."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b026",
+                "Grad_id": "671d3f348e1aa51e8e86b01f",
+                "Naziv": "Fort Santiago",
+                "Opis": "Povijesna tvr─æava koja je klju─ìna u filipinskoj povijesti."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b020",
+            "Naziv": "Tokyo",
+            "Zemlja": "Japan",
+            "Gradonacelnik": "Yuriko Koike",
+            "Broj_stanovnika_grada": 14187176,
+            "Povrsina_grada_km2": 2194,
+            "Vremenska_zona": "UTC+9",
+            "Indeks_sigurnosti": 75.55,
+            "Nadmorska_visina_m": 0,
+            "Rijeke": [
+                "Sumida",
+                "Tama",
+                "Arakawa",
+                "Edogawa"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b027",
+                "Grad_id": "671d3f348e1aa51e8e86b020",
+                "Naziv": "Shibuya Crossing",
+                "Opis": "Jedno od najprometnijih raskri┼¥ja na svijetu."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b028",
+                "Grad_id": "671d3f348e1aa51e8e86b020",
+                "Naziv": "Tokyo Skytree",
+                "Opis": "Najvi┼ía struktura u Japanu s spektakularnim pogledima."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b029",
+                "Grad_id": "671d3f348e1aa51e8e86b020",
+                "Naziv": "Imperial Palace",
+                "Opis": "Glavna rezidencija japanskog cara s predivnim vrtovima."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b021",
+            "Naziv": "Bangkok",
+            "Zemlja": "Tajland",
+            "Gradonacelnik": "Chadchart Sittipunt",
+            "Broj_stanovnika_grada": 9034000,
+            "Povrsina_grada_km2": 1569,
+            "Vremenska_zona": "UTC+7",
+            "Indeks_sigurnosti": 59.5,
+            "Nadmorska_visina_m": 1.5,
+            "Rijeke": [
+                "Chao Phraya"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b02a",
+                "Grad_id": "671d3f348e1aa51e8e86b021",
+                "Naziv": "Grand Palace",
+                "Opis": "Prekrasna kraljevska pala─ìa u Bangkoku."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b022",
+            "Naziv": "Kairo",
+            "Zemlja": "Egipat",
+            "Gradonacelnik": "Khaled Abdel Aal",
+            "Broj_stanovnika_grada": 10100166,
+            "Povrsina_grada_km2": 3085,
+            "Vremenska_zona": "UTC+2",
+            "Indeks_sigurnosti": 49.38,
+            "Nadmorska_visina_m": 23,
+            "Rijeke": [
+                "Nil"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b02b",
+                "Grad_id": "671d3f348e1aa51e8e86b022",
+                "Naziv": "Sfinga",
+                "Opis": "Veliki kameni kip s tijelom lava i glavom faraona."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b02c",
+                "Grad_id": "671d3f348e1aa51e8e86b022",
+                "Naziv": "Piramide u Gizi",
+                "Opis": "Najpoznatije piramide na svijetu, uklju─ìuju─çi Veliku piramidu."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b023",
+            "Naziv": "Moskva",
+            "Zemlja": "Rusija",
+            "Gradonacelnik": "Sergey Sobyanin",
+            "Broj_stanovnika_grada": 13010112,
+            "Povrsina_grada_km2": 2511,
+            "Vremenska_zona": "UTC+3",
+            "Indeks_sigurnosti": 64.41,
+            "Nadmorska_visina_m": 156,
+            "Rijeke": [
+                "Moskva"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b02d",
+                "Grad_id": "671d3f348e1aa51e8e86b023",
+                "Naziv": "Kremlj",
+                "Opis": "Povijesna tvr─æava i politi─ìko sredi┼íte Rusije."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b02e",
+                "Grad_id": "671d3f348e1aa51e8e86b023",
+                "Naziv": "Crveni trg",
+                "Opis": "Poznata javna povr┼íina ispred Kremlja."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b024",
+            "Naziv": "Kuala Lumpur",
+            "Zemlja": "Malezija",
+            "Gradonacelnik": "Maimunah Mohd Sharif",
+            "Broj_stanovnika_grada": 2075600,
+            "Povrsina_grada_km2": 243,
+            "Vremenska_zona": "UTC+8",
+            "Indeks_sigurnosti": 39.32,
+            "Nadmorska_visina_m": 63,
+            "Rijeke": [
+                "Gombak",
+                "Klang",
+                "Batu"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b02f",
+                "Grad_id": "671d3f348e1aa51e8e86b024",
+                "Naziv": "Petronas Twin Towers",
+                "Opis": "Najve─çi dvostruki neboder na svijetu, simbol Kuala Lumpura."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b030",
+                "Grad_id": "671d3f348e1aa51e8e86b024",
+                "Naziv": "Jalan Alor",
+                "Opis": "Poznata ulica hrane s raznovrsnim ┼ítandovima."
+            }]
+        },
+        {
+            "_id": "671d3f348e1aa51e8e86b025",
+            "Naziv": "Havana",
+            "Zemlja": "Kuba",
+            "Gradonacelnik": "Juan Contino Aslan",
+            "Broj_stanovnika_grada": 1814207,
+            "Povrsina_grada_km2": 728.3,
+            "Vremenska_zona": "UTC-5",
+            "Indeks_sigurnosti": 55.38,
+            "Nadmorska_visina_m": 59,
+            "Rijeke": [
+                "Havana",
+                "Luyano",
+                "Cascajal"
+            ],
+            "Znamenitosti": [{
+                "_id": "671d631f1ddd1c5ec586b031",
+                "Grad_id": "671d3f348e1aa51e8e86b025",
+                "Naziv": "Catedral de la Habana",
+                "Opis": "Barokna katedrala u starom gradu Havani."
+            },
+            {
+                "_id": "671d631f1ddd1c5ec586b032",
+                "Grad_id": "671d3f348e1aa51e8e86b025",
+                "Naziv": "Castillo del Morro",
+                "Opis": "Povijesna utvrda koja ┼ítiti ulaz u luku Havanu."
+            }]
+        }]
+    ]
+}
