@@ -1,0 +1,375 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Cities and Attractions API",
+      "description": "API for managing cities and their attractions. This API allows you to retrieve, add, update, and delete cities, as well as get information about attractions for each city.",
+      "version": "1.0.0",
+      "contact": {
+        "name": "Dražen Pešut",
+        "email": "drazen.pesut@fer.unizg.hr"
+      },
+      "license": {
+        "name": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+    },
+    "paths": {
+      "/cities": {
+        "get": {
+          "summary": "Get all cities",
+          "description": "Fetches all the cities from the database.",
+          "responses": {
+            "200": {
+              "description": "List of all cities",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": { "type": "string" },
+                      "message": { "type": "string" },
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "data": {
+                            "type": "array",
+                            "items": { "$ref": "#/components/schemas/City" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "No cities found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/attractions": {
+        "get": {
+          "summary": "Get all attractions",
+          "description": "Fetches all the attractions from the database.",
+          "responses": {
+            "200": {
+              "description": "List of all attractions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": { "type": "string" },
+                      "message": { "type": "string" },
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "data": {
+                            "type": "array",
+                            "items": { "$ref": "#/components/schemas/Attraction" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "No attractions found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/cities/{id}": {
+        "get": {
+          "summary": "Get a city by ID",
+          "description": "Fetches a specific city by its ID.",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the city",
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "City fetched successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/City"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid ID"
+            },
+            "404": {
+              "description": "City not found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "put": {
+          "summary": "Update city by ID",
+          "description": "Updates a specific city by its ID.",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the city",
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/City"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "City updated successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/City"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input"
+            },
+            "404": {
+              "description": "City not found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Delete a city by ID",
+          "description": "Deletes a specific city by its ID.",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the city to delete",
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "City deleted successfully"
+            },
+            "404": {
+              "description": "City not found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/cities/population/{population}": {
+        "get": {
+          "summary": "Get cities by minimum population",
+          "description": "Fetches cities that have a population greater than the provided value.",
+          "parameters": [
+            {
+              "name": "population",
+              "in": "path",
+              "required": true,
+              "description": "Minimum population of the city",
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Cities fetched successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": { "type": "string" },
+                      "message": { "type": "string" },
+                      "response": {
+                        "type": "array",
+                        "items": { "$ref": "#/components/schemas/City" }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid population value"
+            },
+            "404": {
+              "description": "No cities found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/cities/min_safety/{index}": {
+        "get": {
+          "summary": "Get cities by safety index",
+          "description": "Fetches cities that have a safety index greater than the provided value.",
+          "parameters": [
+            {
+              "name": "index",
+              "in": "path",
+              "required": true,
+              "description": "Minimum safety index value",
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Cities fetched successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": { "type": "string" },
+                      "message": { "type": "string" },
+                      "response": {
+                        "type": "array",
+                        "items": { "$ref": "#/components/schemas/City" }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid safety index value"
+            },
+            "404": {
+              "description": "No cities found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/cities/{name}/attractions": {
+        "get": {
+          "summary": "Get attractions for a specific city",
+          "description": "Fetches all attractions for the specified city.",
+          "parameters": [
+            {
+              "name": "name",
+              "in": "path",
+              "required": true,
+              "description": "Name of the city",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Attractions fetched successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": { "type": "string" },
+                      "message": { "type": "string" },
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "city": { "type": "string" },
+                          "attractions": {
+                            "type": "array",
+                            "items": { "$ref": "#/components/schemas/Attraction" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "City or attractions not found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "City": {
+          "type": "object",
+          "properties": {
+            "Naziv": { "type": "string" },
+            "Zemlja": { "type": "string" },
+            "Gradonacelnik": { "type": "string" },
+            "Broj_stanovnika_grada": { "type": "integer" },
+            "Povrsina_grada_km2": { "type": "number" },
+            "Vremenska_zona": { "type": "string" },
+            "Indeks_sigurnosti": { "type": "number" },
+            "Nadmorska_visina_m": { "type": "number" },
+            "Rijeke": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "Attraction": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "city_id": { "type": "integer" }
+          }
+        }
+      }
+    }
+  }
+  
