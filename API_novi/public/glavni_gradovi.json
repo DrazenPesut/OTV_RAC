@@ -1,0 +1,337 @@
+[
+  {
+    "_id": "671d3e151fbe2cf25e86b01e",
+    "Naziv": "Pariz",
+    "Zemlja": "Francuska",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Hidalgo",
+      "givenName": "Anne",
+      "birthDate": "1959-06-19",
+      "birthPlace": "Paris, France"
+    },
+    "Broj_stanovnika_grada": 2102650,
+    "Povrsina_grada_km2": 105.4,
+    "Vremenska_zona": "CET",
+    "Indeks_sigurnosti": 42.09,
+    "Nadmorska_visina_m": 35,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Seine",
+        "isAccessibleForFree": true
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b01d",
+    "Naziv": "Berlin",
+    "Zemlja": "Njemačka",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Wegner",
+      "givenName": "Kai",
+      "birthDate": "1975-02-12",
+      "birthPlace": "Berlin, Germany"
+    },
+    "Broj_stanovnika_grada": 3878100,
+    "Povrsina_grada_km2": 891.8,
+    "Vremenska_zona": "CET",
+    "Indeks_sigurnosti": 55.38,
+    "Nadmorska_visina_m": 34,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Spree",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Havel",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Dahme",
+        "isAccessibleForFree": true
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b01e",
+    "Naziv": "Buenos Aires",
+    "Zemlja": "Argentina",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Macri",
+      "givenName": "Jorge",
+      "birthDate": "1967-07-25",
+      "birthPlace": "Buenos Aires, Argentina"
+    },
+    "Broj_stanovnika_grada": 3120612,
+    "Povrsina_grada_km2": 203.3,
+    "Vremenska_zona": "UTC-3",
+    "Indeks_sigurnosti": 36.59,
+    "Nadmorska_visina_m": 25,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Rio Reconquista",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Rio Lujan",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Rio Tigris",
+        "isAccessibleForFree": false
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b01f",
+    "Naziv": "Manila",
+    "Zemlja": "Filipini",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "H.",
+      "givenName": "Mariah Sheilah",
+      "birthDate": "1980-11-14",
+      "birthPlace": "Manila, Philippines"
+    },
+    "Broj_stanovnika_grada": 1846513,
+    "Povrsina_grada_km2": 38.55,
+    "Vremenska_zona": "UTC+8",
+    "Indeks_sigurnosti": 35.77,
+    "Nadmorska_visina_m": 13,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Pasig",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Marikina",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "San Juan",
+        "isAccessibleForFree": true
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b020",
+    "Naziv": "Tokyo",
+    "Zemlja": "Japan",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Koike",
+      "givenName": "Yuriko",
+      "birthDate": "1952-07-15",
+      "birthPlace": "Tokyo, Japan"
+    },
+    "Broj_stanovnika_grada": 14187176,
+    "Povrsina_grada_km2": 2194,
+    "Vremenska_zona": "UTC+9",
+    "Indeks_sigurnosti": 75.55,
+    "Nadmorska_visina_m": 0,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Sumida",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Tama",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Arakawa",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Edogawa",
+        "isAccessibleForFree": false
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b021",
+    "Naziv": "Bangkok",
+    "Zemlja": "Tajland",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Sittipunt",
+      "givenName": "Chadchart",
+      "birthDate": "1969-12-13",
+      "birthPlace": "Bangkok, Thailand"
+    },
+    "Broj_stanovnika_grada": 9034000,
+    "Povrsina_grada_km2": 1569,
+    "Vremenska_zona": "UTC+7",
+    "Indeks_sigurnosti": 59.5,
+    "Nadmorska_visina_m": 1.5,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Chao Phraya",
+        "isAccessibleForFree": true
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b022",
+    "Naziv": "Kairo",
+    "Zemlja": "Egipat",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Abdel Aal",
+      "givenName": "Khaled",
+      "birthDate": "1962-10-03",
+      "birthPlace": "Cairo, Egypt"
+    },
+    "Broj_stanovnika_grada": 10100166,
+    "Povrsina_grada_km2": 3085,
+    "Vremenska_zona": "UTC+2",
+    "Indeks_sigurnosti": 49.38,
+    "Nadmorska_visina_m": 23,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Nil",
+        "isAccessibleForFree": true
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b023",
+    "Naziv": "Moskva",
+    "Zemlja": "Rusija",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Sobyanin",
+      "givenName": "Sergey",
+      "birthDate": "1958-10-21",
+      "birthPlace": "Tume, Russia"
+    },
+    "Broj_stanovnika_grada": 13010112,
+    "Povrsina_grada_km2": 2511,
+    "Vremenska_zona": "UTC+3",
+    "Indeks_sigurnosti": 64.41,
+    "Nadmorska_visina_m": 156,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Moskva",
+        "isAccessibleForFree": true
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b024",
+    "Naziv": "Kuala Lumpur",
+    "Zemlja": "Malezija",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Mohd Sharif",
+      "givenName": "Maimunah",
+      "birthDate": "1964-05-07",
+      "birthPlace": "Penang, Malaysia"
+    },
+    "Broj_stanovnika_grada": 2075600,
+    "Povrsina_grada_km2": 243,
+    "Vremenska_zona": "UTC+8",
+    "Indeks_sigurnosti": 39.32,
+    "Nadmorska_visina_m": 63,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Gombak",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Klang",
+        "isAccessibleForFree": false
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Batu",
+        "isAccessibleForFree": true
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  },
+  {
+    "_id": "671d3f348e1aa51e8e86b025",
+    "Naziv": "Havana",
+    "Zemlja": "Kuba",
+    "Gradonacelnik": {
+      "@type": "Person",
+      "familyName": "Contino Aslan",
+      "givenName": "Juan",
+      "birthDate": "1973-03-22",
+      "birthPlace": "Havana, Cuba"
+    },
+    "Broj_stanovnika_grada": 1814207,
+    "Povrsina_grada_km2": 728.3,
+    "Vremenska_zona": "UTC-5",
+    "Indeks_sigurnosti": 55.38,
+    "Nadmorska_visina_m": 59,
+    "Rijeke": [
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Havana",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Luyano",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "RiverBodyOfWater",
+        "name": "Cascajal",
+        "isAccessibleForFree": true
+      }
+    ],
+    "@context": "https://schema.org",
+    "@type": "City",
+    "__v": 0
+  }
+]

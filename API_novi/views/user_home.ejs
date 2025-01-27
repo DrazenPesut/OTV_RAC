@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2.5rem;
+            margin: 10px;
+        }
+
+        a{
+            font-size: 1.5rem;
+        }
+
+        span{
+            background-color: cornflowerblue;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            margin-right: 10px;
+        }
+        
+        span:hover{
+            cursor: pointer;
+        }
+
+        .header{
+            display: flex;
+            justify-content: end;
+        }
+    </style>
+
+<script>
+    let userProfile = () => {
+        window.location.href = '/user_profile';
+    };
+
+    let logout = () => {
+        window.location.href = '/logout';
+    };
+
+    let updateData = async () => {
+    const response = await fetch('/updateFiles', { method: 'POST' });
+
+    if (!response.ok) {
+        alert("Failed to refresh the files.");
+    } else {
+        alert("Files have been updated successfully!");
+    }
+};
+
+
+</script>
+
+    <body>
+        <div class="header">
+            <span onclick="updateData()"()">
+                Osvježi preslike
+            </span>
+            <span onclick="userProfile()">
+                Korisnički profil
+            </span>
+            <span onclick="logout()">
+                Odjava
+            </span>
+        </div>
+        <div>
+            Glavni Gradovi
+        </div>
+        <br/>
+        <br/>
+       <div>
+        <a href="/api/download/json" download="glavni_gradovi_lab4.json">Preuzmi datoteku u JSON formatu</a><br/>
+        <a href="/api/download/csv" download="glavni_gradovi_lab4.csv">Preuzmi datoteku u CSV formatu</a>
+       </div>
+    </body>
+</html>

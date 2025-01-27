@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>User Information</title>
+        <meta name="description" content="User data display">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        div {
+            width: 99vw;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.5rem;
+        }
+
+        img {
+            max-width: 150px; 
+            max-height: 150px;
+            border-radius: 50%; 
+            object-fit: cover; 
+        }
+    </style>
+    <script>
+        const fetchUserData = async () =>  {
+            const response = await fetch('/getUserData');
+            if(!response.ok){
+                alert('Failed to fetch user data...');
+            } else {
+                const data = await response.json(); 
+                return data;
+            }
+        }
+
+        const getUserData = async () => {
+            const user_data = await fetchUserData();
+            
+            document.getElementById("user-name").textContent = `Nickname: ${user_data.nickname}`;
+            document.getElementById("user-email").textContent = `Email: ${user_data.email}`;
+
+            const userImage = document.getElementById("user-image");
+            userImage.src = user_data.picture; 
+        }
+
+        getUserData();
+    </script>
+    <body>
+       <div>
+            <p>User Information</p>
+            <img id="user-image" src="" alt="User Image">
+            <p id="user-name">Nickname: </p>  
+            <p id="user-email">Email: </p>    
+       </div>
+    </body>
+</html>
